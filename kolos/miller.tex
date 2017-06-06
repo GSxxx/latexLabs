@@ -1,0 +1,83 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{graphicx}
+\usepackage{anysize}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{enumerate}
+%\usepackage{times}
+\usepackage{tikz}
+%\usetikzlibrary{calc,through,backgrounds,positioning,fit,calendar}
+\usetikzlibrary{shapes,arrows,shadows}
+
+
+\setcounter{section}{14}
+\setcounter{equation}{9}
+\setcounter{page}{111}
+\setcounter{footnote}{16}
+\setcounter{figure}{29}
+
+\tikzstyle{stt}=[shape=circle, draw, minimum height=10mm, fill=red!30]
+
+
+\begin{document}
+
+\section{Środowisko matematyczne i grafy}
+\label{title}
+
+\subsection{Instruckja}
+Należy napisać document klasy {\em article}, który będzie miał postać taką jak Pani/Pan trzyma w ręku. Dopuszczalne są odstępstwa tworzonego przez Panią/Pana dokumentu od tej (papierowej) postaci. Obejmują one pewne rozszerzenia -- od wersju czarno--białej do kolorowej -- oraz zawężenia do uproszczonej postaci (za dodatkowe "dodatnie" i "ujemne punkty"). Informacje o tych modyfikacjach znajdują sie w przypisach\footnote{To jest pierwszy przypis. Zalecana klasa dokumentu to article z parametrami {\em a4paper, 11pt}}.
+
+Ta strona zawiera rozdział (\ref{title}), a w nim dwa podrozdziały\footnote{Najlepiej byłoby nadać numer rozdziału ustawiając licznik. W przypadku numerowania innych obiektów -- podobnie, ale należy traktować to jako kosmetykę. Ważniejsze jest, aby w odwołaniach do obiektów używać przypisanych im etykiet}. Wersję źródłową (.tex) i wynikową (.pdf) proszę wysłąć na adres $\mathtt{miller@agh.edu.pl}$.
+
+\subsection{Zadania}
+\begin{enumerate}
+\item Wzór (\ref{eq:zadanie}) pozostawiamy bez interpretacji.
+
+\begin{equation}
+\label{eq:zadanie}
+\frac{dW}{d\omega dVdt} \backsimeq \left\{
+\begin{array}{rcl}
+\frac{16n_en_iZ^2e^6}{3\sqrt{3}c^3m^2v}g_{ff} & dla &\omega \ll \frac{mv^2}{h} \\
+0 & dla & \omega \gg d(a+\frac{mv^2}{h})
+\end{array}
+\end{equation}
+Tu kończy się zadanie pierwsze.
+
+\item
+Na rysunku 30 jest przedstawony prosty graf\footnote{Zalecany pakiet: {\em tikz}. Dobrze byłoby odtworzyć kształt łuków (krawędzi grafu), Rozszerzenia: wypełnić węzły kolorem jasnoczerwonym, łuki np. niebieskie, opisy łuków na jasnozielonym tle. Możliwe uproszczenia: wszystkie łuki można narysować linią ciągłą jednakowej grubości}.
+
+\begin{figure}[!ht]
+\caption{Graf arytmetyczny}
+\label{fig:graf}
+\begin{center}
+\begin{tikzpicture}[scale=1,inner sep=0.4mm]
+\node (1) [stt] at (3,3) {$?$};
+\node (2) [stt] at (-3,3) {$18$};
+\node (3) [stt] at (0,0) {$7$};
+
+\draw[-triangle 60,color=blue] (3) -- node [fill=green] {$+11$} (2);
+\draw[-triangle 60,thick,color=blue] (1) -- node [fill=green] {$?$} (2);
+
+\draw[-triangle 60,blue,thick,dashed] (1) .. node [fill=green] {$?$} controls (2,0) and (3,1)  .. (3);
+\draw[-triangle 60,blue] (3) .. node [fill=green] {$-3$} controls (0,2) and (1,3)  .. (1);
+
+\draw[-triangle 60,blue] (2) .. node [fill=green] {$-11$} controls (-3,1) and (-2,0)  .. (3);
+
+
+\end{tikzpicture}
+\end{center}
+\end{figure}
+\end{enumerate}
+
+To jest koniec sprawdzianu. Jeżeli jest jeszcze czas, to proszę sprawdzic wszystkie szczegóły\footnote{Możliwe uproszczenie: W tym wypunktowaniu można zastąpic znaki $+$ standardową kropką.}, np.:
+\begin{itemize}
+\item[$+$] pozostawienie na końcu linii wyrazów jednoliterowych,
+\item[$+$] wyrównanie w pionie elementów matematycznych,
+\item[$+$] postaci paginy dolnej i górnej, numeracji itp.
+\end{itemize}
+
+
+\end{document}

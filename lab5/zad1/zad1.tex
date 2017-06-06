@@ -1,0 +1,29 @@
+\documentclass{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[latin2]{inputenc}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usetikzlibrary{calc,through,backgrounds,positioning,fit}
+\usetikzlibrary{shapes,arrows,shadows}
+ 
+\begin{document}
+ 
+\begin{tikzpicture}[scale=1,inner sep=0.4mm]
+\coordinate (O) at (0,0);
+\coordinate (A) at (-75:2cm);
+\coordinate (B) at (85:2cm);
+
+%\draw (B) arc (90:-70:2cm);
+\fill [green!50, draw=grey] (O) -- (B) arc (85:-75:2) -- cycle;
+\draw (0) circle (2cm);
+\node at (O) [circle,fill=black] {};
+\node at (A) [circle,fill=black] {};
+\node at (B) [circle,fill=black] {};
+\node at (O) [left=2pt] {$O$};
+\node at (O) [right=3pt] {$\alpha = 160^\circ$};
+\node at (-82:2cm) [above=2pt] {$A$};
+\node at (91:2.05cm) [below=2pt] {$B$};
+
+\end{tikzpicture}
+ 
+\end{document}

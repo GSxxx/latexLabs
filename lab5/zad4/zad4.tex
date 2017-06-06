@@ -1,0 +1,33 @@
+\documentclass{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage{tikz}
+
+\usetikzlibrary{calc,through,backgrounds,positioning,fit}
+\usetikzlibrary{shapes,arrows,shadows,mindmap}
+
+\begin{document}
+\begin{tikzpicture}[mindmap, every node/.style=concept,
+grow cyclic,
+level 1/.append style={sibling angle=72, level distance=5.3cm},
+level 2/.append style={sibling angle=45}]
+
+\node [concept,concept color=red!50!blue, text=white] {\bf Wydzia³	Elektrotechniki, Automatyki,
+	Informatyki i In¿ynierii Biomedycznej} [clockwise from=0]
+
+child[concept color=green!50] {node {Informatyka} [clockwise from=90]
+	child[concept color=green!30] {node {IwMiSM}}
+	child[concept color=green!30] {node {IOiS}}
+	child[concept color=green!30] {node {SIwPiA}}
+	child[concept color=green!30] {node {GK}}
+	child[concept color=green!30] {node {SI}}
+	}
+child[concept color=pink!70!red] {node {Mikro-elektronika}}
+child[concept color=orange] {node {Inzynieria biomedyczna}}
+child[concept color=yellow] {node {Elektro-technika}}
+child[concept color=blue!50]{node {Automatyka i robotyka}};
+
+
+\end{tikzpicture}
+\end{document}
