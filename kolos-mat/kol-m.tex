@@ -1,0 +1,92 @@
+%Paweł Renc
+\documentclass[a4paper, 11pt]{article}
+\usepackage{amssymb}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{anysize}
+\usepackage{amsthm}
+%\usepackage{enumerate}
+%\usepackage{times}
+\usepackage{color}
+\usepackage{multirow}
+
+\usepackage{fancyhdr}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{\slshape LITERATURA}
+\fancyfoot[R]{Strona \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+\setcounter{section}{35}
+\setcounter{page}{151}
+\setcounter{footnote}{7}
+\setcounter{table}{14}
+
+\marginsize{4cm}{2cm}{2cm}{2cm}
+
+
+\begin{document}
+%\bibliographystyle{abbrv}
+\pagestyle{fancy}
+\section{Tabela i literatura}
+\label{title}
+
+\subsection{Instruckja}
+
+Należy napisać document klasy {\em article}, który będzie miał postać taką jak Pani/Pan trzyma w ręku. Dopuszczalne są odstępstwa od tej postac, tj. rozszerzenia oraz zwężenia do uproszczonej postaci (za "dodatkowe" i "ujemne" punkty). Informacje o tych modyfikacjach znajdują się w przypisach\footnote{Zalecane parametry dokumentu to {\em a4paper,11pt}, marginesy: górny i dolny 2cm, lewy 4cm, aprawy 2cm.}.
+
+Ta strona zawiera rozdział (sekcje) 36, a w nim dwa podrozdziały(podsekcje)\footnote{Najlepiej byłoby nadać numer rozdziału ustawiając odpowiedni licznik. W przypadku innych obiektów -- podobnie, ale należy traktować to jako kosmetykę. Ważniejsze jest, aby w odwołaniach do obiektów używać przypisanych im etykiet.} i spis literatury. Na początku pliku źródłowego, w komentarzu proszę wpisać swoje imię i nazwisko. Wersję źródłową (.tex i .bib) i wynikową (.pdf) proszę wysłąć na adres $\mathtt{ptm@agh.edu.pl}$\footnote{Te dwa zdania należy napisać kolorem czerwonym}.
+
+\subsection{Zadania}
+\begin{enumerate}
+\item {W tabeli (\ref{tab}) przedstawiono klasyfikację stałych w języku C.
+
+\begin{table}[!h]
+\caption{Stałe w języku C}
+\label{tab}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+
+\cline{5-5}
+\multicolumn{4}{l|}{}&Przykłady \\
+\hline
+\multicolumn{4}{|l|}{Deklarowane stałe} & const int size =128 \\
+\hline
+\multicolumn{4}{|l|}{Stałe preprocesora} & \#define SIZE 256 \\
+\hline
+\multirow{7}{*}{Literały} & \multicolumn{3}{|l|}{łańcuch znakowy} & "koniec linii . \textbackslash n" \\
+
+ \cline{2-5}& \multicolumn{2}{c|}{\multirow{2}{*}{znakowe}} & escape sequence & '\textbackslash n', '\textbackslash xa4'\\
+\cline{4-5} &&& znak & 'A', '!'\\  
+
+\cline{2-5}&\multirow{4}{*}{liczbowe}&\multirow{3}{*}{całkowite}& dziesiętne & 8743 \\
+\cline{4-5}&&&ósemkowe&07464 \\
+\cline{4-5}&&&szesnastkowe&0x5AFF \\
+\cline{3-5}&&\multicolumn{2}{|c|}{zmiennoprzecinkowe}& 140.58\\
+
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+}
+\item {Należy\footnote{Możliwe uproszczenia: znaki przy wypunktowaniach w każdej pozycji można zastąpić standardowym znakiem dla {\em"itemize".}}:
+
+\begin{itemize}
+\item[$\lozenge$] {znaleźć w sieci notki bibliograficzne dwóch pozycji\footnote{Z dokładnością do autrów i tytułów -- pozostałe dane mogą wskazywać na inne wydanie.},
+}
+\item[$\lozenge$] {utworzyć plik $\mathtt{.bib}$,}
+\item[$\star$] {
+odwołać się do znalezionych pozycji w literaturze \cite{kahneman2011thinking} lub \cite{kernighan2006c}.
+}
+\end{itemize}
+}
+\end{enumerate}
+
+%\bibliography{bib}
+
+\end{document}
