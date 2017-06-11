@@ -6,7 +6,6 @@
 \usepackage{anysize}
 \usepackage{amsthm}
 \usepackage{color}
-%\usepackage{titlesec}
 \usepackage{multirow}
 \usepackage{fancyhdr}
 \fancyhead{}
@@ -16,7 +15,6 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
-%\titlespacing\subsection{0pt}{0pt plus 2pt minus 2pt}{8pt plus 4pt minus 2pt}
 
 \setcounter{section}{35}
 \setcounter{page}{151}
@@ -25,8 +23,6 @@
 
 \marginsize{4cm}{2cm}{2cm}{2cm}
 \bibliographystyle{abbrv}
-
-
 
 \begin{document}
 \pagestyle{fancy}
@@ -57,9 +53,8 @@ Ta strona zawiera rozdział (sekcje) 36, a w nim dwa podrozdziały(podsekcje)\fo
 \multicolumn{4}{|l|}{Stałe preprocesora} & \verb!#define SIZE 256! \\
 \hline
 \multirow{7}{*}{Literały} & \multicolumn{3}{|l|}{łańcuch znakowy} & \verb!"koniec linii . \n"! \\
-
- \cline{2-5}& \multicolumn{2}{c|}{\multirow{2}{*}{znakowe}} & escape sequence & \verb!'\n', '\xa4'!\\
-\cline{4-5} &&& znak & \verb|'A', '!'|\\  
+\cline{2-5}& \multicolumn{2}{c|}{\multirow{2}{*}{znakowe}} & escape sequence & \verb!'\n', '\xa4'!\\
+\cline{4-5} &\multicolumn{2}{|l|}{}&znak & \verb|'A', '!'|\\  
 \cline{2-5}&\multirow{4}{*}{liczbowe}&\multirow{3}{*}{całkowite}& dziesiętne & \verb!8743! \\
 \cline{4-5}&&&ósemkowe&\verb!07464! \\
 \cline{4-5}&&&szesnastkowe&\verb!0x5AFF! \\
@@ -83,7 +78,7 @@ Ta strona zawiera rozdział (sekcje) 36, a w nim dwa podrozdziały(podsekcje)\fo
 {\centering Dalsze informacje możma znaleźć w literaturze \cite{kahneman2011thinking} lub \cite{kernighan2006c}.}
 }
 \end{enumerate}
-
+\
 \bibliography{bib}
 
 \end{document}
